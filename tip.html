@@ -26,20 +26,55 @@ a.item:hover,a.key:hover,a.item:focus-visible,a.key:focus-visible{border-color:v
 .note a,.back{color:var(--accent-ink)}
 .back{display:inline-block;margin-top:28px;font-size:14px;text-decoration:none}
 footer{margin-top:40px;font-size:12px;color:var(--mute)}
+.card{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.card a.item{border:0;border-radius:0;background:none}
+.ex{padding:0 16px 16px 66px;display:flex;flex-direction:column;gap:8px}
+.lab{font-size:12px;color:var(--mute);margin-bottom:3px}
+.say{font-size:14px;color:var(--ink);background:rgba(222,122,92,.08);border-radius:10px;padding:8px 10px}
+.box{position:relative}
+pre{font:12.5px/1.5 ui-monospace,Menlo,monospace;color:var(--ink-2);background:#0E0E0D;border:1px solid var(--line);border-radius:10px;
+padding:10px 64px 10px 10px;white-space:pre-wrap;word-break:break-all}
+button.cp{position:absolute;top:6px;right:6px;font:12px -apple-system,sans-serif;color:var(--accent-ink);background:var(--card);
+border:1px solid var(--line);border-radius:8px;padding:4px 8px;cursor:pointer}
+.rd{font-size:13px;color:var(--accent-ink);text-decoration:none}
+h2{font-size:18px;font-weight:600;margin:36px 0 6px}
+.h2s{font-size:14px;color:var(--ink-2);margin-bottom:14px}
+.how{border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px}
+.how b{font-size:14px;font-weight:600}
+.how p{font-size:13px;color:var(--ink-2)}
+details.grp{border:1px solid var(--line);border-radius:18px;background:var(--card);margin-bottom:10px}
+details.grp summary{padding:14px 16px;font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+details.grp summary::-webkit-details-marker{display:none}
+details.grp summary span{color:var(--mute);font-weight:400;font-size:14px}
+.row{border-top:1px solid var(--line);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.row a.nm{color:var(--ink);font-size:16px;font-weight:600;text-decoration:none}
+.row a.nm small{color:var(--mute);font-weight:400;font-size:12px;margin-left:6px}
+@media(max-width:420px){.ex{padding-left:16px}}
 </style></head>
-<body><main><div class="eye">키워드 「꿀팁」</div><h1>토큰 낭비 방지 무조건 쓸 툴 5</h1><p class="sub">영상에서 소개한 5개예요. 눌러서 바로 가세요.</p><div class="list"><a class="item" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">
+<body><main><div class="eye">키워드 「꿀팁」</div><h1>토큰 낭비 방지 무조건 쓸 툴 5</h1><p class="sub">영상에서 소개한 5개예요.</p><div class="how"><b>설치하는 법 (셋 중 하나)</b>
+<p>1) 터미널에서 — 카드의 '설치' 칸을 복사해 붙여 넣으세요.</p>
+<p>2) 클로드 코드 안에서 — <code>/plugin</code> 으로 시작하는 줄은 클로드 코드 입력창에 그대로 넣으세요.</p>
+<p>3) 제일 쉬운 방법 — 클로드에게 링크를 주세요.</p>
+<div class="box"><pre>이 스킬 설치해 줘: https://github.com/저장소주소</pre><button class="cp" type="button">복사</button></div>
+<p>설치가 끝나면 클로드 코드를 다시 열고 '이렇게 말해 보세요' 문장을 그대로 말하면 돼요.</p></div><div class="list"><div class="card"><a class="item" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">
 <span class="n">01</span><span class="t"><div class="name">그래피파이<small>Graphify</small></div>
 <div class="does">코드를 지도로 만들어줘요</div><div class="url">github.com/Graphify-Labs/graphify</div></span>
-<span class="go">↗</span></a><a class="item" href="https://github.com/thedotmack/claude-mem/" target="_blank" rel="noopener">
+<span class="go">↗</span></a><div class="ex"><div><div class="lab">이렇게 말해 보세요</div><div class="say">“우리 회사 프로젝트 전체 구조를 한눈에 파악할 수 있게 그래프로 분석해 줘.”</div></div><div class="cmd"><div class="lab">설치 (README 원문)</div><div class="box"><pre>uv tool install graphifyy
+graphify install</pre><button class="cp" type="button">복사</button></div></div></div></div><div class="card"><a class="item" href="https://github.com/thedotmack/claude-mem/" target="_blank" rel="noopener">
 <span class="n">02</span><span class="t"><div class="name">클로드멤<small>claude-mem</small></div>
 <div class="does">세션 작업 내용을 압축 저장해요</div><div class="url">github.com/thedotmack/claude-mem</div></span>
-<span class="go">↗</span></a><a class="item" href="https://github.com/diegosouzapw/OmniRoute/blob/main/docs/guides/CLI-INTEGRATIONS.md" target="_blank" rel="noopener">
+<span class="go">↗</span></a><div class="ex"><div><div class="lab">이렇게 말해 보세요</div><div class="say">“지난주에 논의했던 고객 응대 가이드라인 내용 다시 불러와 줘.”</div></div><div class="cmd"><div class="lab">설치 (README 원문)</div><div class="box"><pre>npx claude-mem install</pre><button class="cp" type="button">복사</button></div></div></div></div><div class="card"><a class="item" href="https://github.com/diegosouzapw/OmniRoute/blob/main/docs/guides/CLI-INTEGRATIONS.md" target="_blank" rel="noopener">
 <span class="n">03</span><span class="t"><div class="name">옴니루트<small>omni-route</small></div>
 <div class="does">여러 무료 모델을 자동 연결해요</div><div class="url">github.com/diegosouzapw/OmniRoute/blob/main/docs/guides/CLI-INTEGRATIONS.md</div></span>
-<span class="go">↗</span></a><a class="item" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">
+<span class="go">↗</span></a><div class="ex"><div><div class="lab">이렇게 말해 보세요</div><div class="say">“비용이 가장 적게 드는 무료 모델로 전환해서 이 보고서 검토해 줘.”</div></div><div class="cmd"><div class="lab">설치 (README 원문)</div><div class="box"><pre>npm install -g omniroute
+claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream</pre><button class="cp" type="button">복사</button></div></div></div></div><div class="card"><a class="item" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">
 <span class="n">04</span><span class="t"><div class="name">헤드룸<small>headroom</small></div>
 <div class="does">입출력 데이터 크기를 압축해요</div><div class="url">github.com/headroomlabs-ai/headroom</div></span>
-<span class="go">↗</span></a><a class="item" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">
+<span class="go">↗</span></a><div class="ex"><div><div class="lab">이렇게 말해 보세요</div><div class="say">“방대한 매출 데이터와 고객 로그를 압축해서 핵심 이슈만 찾아 줘.”</div></div><div class="cmd"><div class="lab">설치 (README 원문)</div><div class="box"><pre>uv tool install --python 3.13 &quot;headroom-ai[all]&quot;
+headroom wrap claude</pre><button class="cp" type="button">복사</button></div></div></div></div><div class="card"><a class="item" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">
 <span class="n">05</span><span class="t"><div class="name">에이치티엠엘<small>answer-me-with-html</small></div>
 <div class="does">긴 답변을 한 장으로 정리해요</div><div class="url">github.com/QingYunA/answer-me-with-html</div></span>
-<span class="go">↗</span></a></div><p class="note">설치는 각 링크의 안내(깃허브는 README)를 따라 하세요.</p><a class="back" href="./">← 다른 키워드</a><footer>113일 수익화 일지 · AI 자동화를 싸게 하는 법</footer></main></body></html>
+<span class="go">↗</span></a><div class="ex"><div><div class="lab">이렇게 말해 보세요</div><div class="say">“이번 분기 신제품 제안서를 한눈에 들어오는 깔끔한 웹페이지 문서로 정리해 줘.”</div></div><div class="cmd"><div class="lab">설치 (README 원문)</div><div class="box"><pre>/plugin marketplace add QingYunA/answer-me-with-html
+/plugin install answer-me-with-html@answer-me-with-html</pre><button class="cp" type="button">복사</button></div></div></div></div></div><a class="back" href="./">← 다른 키워드</a><footer>113일 수익화 일지 · AI 자동화를 싸게 하는 법</footer></main><script>document.addEventListener('click',e=>{const b=e.target.closest('button.cp');if(!b)return;
+const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
+setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

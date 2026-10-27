@@ -26,5 +26,31 @@ a.item:hover,a.key:hover,a.item:focus-visible,a.key:focus-visible{border-color:v
 .note a,.back{color:var(--accent-ink)}
 .back{display:inline-block;margin-top:28px;font-size:14px;text-decoration:none}
 footer{margin-top:40px;font-size:12px;color:var(--mute)}
+.card{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.card a.item{border:0;border-radius:0;background:none}
+.ex{padding:0 16px 16px 66px;display:flex;flex-direction:column;gap:8px}
+.lab{font-size:12px;color:var(--mute);margin-bottom:3px}
+.say{font-size:14px;color:var(--ink);background:rgba(222,122,92,.08);border-radius:10px;padding:8px 10px}
+.box{position:relative}
+pre{font:12.5px/1.5 ui-monospace,Menlo,monospace;color:var(--ink-2);background:#0E0E0D;border:1px solid var(--line);border-radius:10px;
+padding:10px 64px 10px 10px;white-space:pre-wrap;word-break:break-all}
+button.cp{position:absolute;top:6px;right:6px;font:12px -apple-system,sans-serif;color:var(--accent-ink);background:var(--card);
+border:1px solid var(--line);border-radius:8px;padding:4px 8px;cursor:pointer}
+.rd{font-size:13px;color:var(--accent-ink);text-decoration:none}
+h2{font-size:18px;font-weight:600;margin:36px 0 6px}
+.h2s{font-size:14px;color:var(--ink-2);margin-bottom:14px}
+.how{border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px}
+.how b{font-size:14px;font-weight:600}
+.how p{font-size:13px;color:var(--ink-2)}
+details.grp{border:1px solid var(--line);border-radius:18px;background:var(--card);margin-bottom:10px}
+details.grp summary{padding:14px 16px;font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+details.grp summary::-webkit-details-marker{display:none}
+details.grp summary span{color:var(--mute);font-weight:400;font-size:14px}
+.row{border-top:1px solid var(--line);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.row a.nm{color:var(--ink);font-size:16px;font-weight:600;text-decoration:none}
+.row a.nm small{color:var(--mute);font-weight:400;font-size:12px;margin-left:6px}
+@media(max-width:420px){.ex{padding-left:16px}}
 </style></head>
-<body><main><div class="eye">무료 자료</div><h1>영상에서 말한<br>키워드를 누르세요</h1><p class="sub">댓글에 남긴 키워드와 같은 이름이에요.</p><div class="list"><a class="key" href="video"><span class="t"><div class="name">영상</div><div class="does">숏폼 비용 줄이는 필수 꿀툴 5</div></span><span class="go">→</span></a><a class="key" href="tip"><span class="t"><div class="name">꿀팁</div><div class="does">토큰 낭비 방지 무조건 쓸 툴 5</div></span><span class="go">→</span></a></div><footer>113일 수익화 일지 · AI 자동화를 싸게 하는 법</footer></main></body></html>
+<body><main><div class="eye">무료 자료</div><h1>영상에서 말한<br>키워드를 누르세요</h1><p class="sub">댓글에 남긴 키워드와 같은 이름이에요.</p><div class="list"><a class="key" href="video"><span class="t"><div class="name">영상</div><div class="does">숏폼 비용 줄이는 필수 꿀툴 5</div></span><span class="go">→</span></a><a class="key" href="tip"><span class="t"><div class="name">꿀팁</div><div class="does">토큰 낭비 방지 무조건 쓸 툴 5</div></span><span class="go">→</span></a></div><footer>113일 수익화 일지 · AI 자동화를 싸게 하는 법</footer></main><script>document.addEventListener('click',e=>{const b=e.target.closest('button.cp');if(!b)return;
+const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
+setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>
