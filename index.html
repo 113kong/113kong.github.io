@@ -3,7 +3,7 @@
 <title>113 자료실</title><meta name="description" content="영상에서 고른 AI 도구의 설치 명령·바로 쓰는 요청문·공식 화면을 모은 무료 실전 가이드."><meta name="theme-color" content="#F0F9FF">
 <link rel="canonical" href="https://113kong.github.io/"><meta property="og:type" content="website"><meta property="og:site_name" content="113 자료실">
 <meta property="og:locale" content="ko_KR"><meta property="og:title" content="113 자료실"><meta property="og:description" content="영상에서 고른 AI 도구의 설치 명령·바로 쓰는 요청문·공식 화면을 모은 무료 실전 가이드.">
-<meta property="og:url" content="https://113kong.github.io/"><meta name="twitter:card" content="summary"><style>
+<meta property="og:url" content="https://113kong.github.io/"><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23082F49'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='800' fill='%23F0F9FF' text-anchor='middle'%3E113%3C/text%3E%3C/svg%3E"><style>
 @font-face{font-family:Pretendard;src:url(fonts/Pretendard-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url(fonts/Pretendard-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:Pretendard;src:url(fonts/Pretendard-Bold.woff2) format("woff2");font-weight:600 800;font-display:swap}
@@ -39,6 +39,10 @@ h1{font-size:clamp(30px,6.4vw,46px);font-weight:800;line-height:1.2;letter-spaci
 .keys{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 22px;font-size:14px;color:var(--mute)}
 .chip{font-size:14px;font-weight:600;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;transition:all .25s var(--ease)}
 .chip:hover{border-color:var(--accent);color:var(--accent)}
+button.chip{font-family:inherit;cursor:pointer}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--canvas)}
+.chip small{font-size:12px;font-weight:500;opacity:.7;margin-left:4px}
+.card[hidden]{display:none}
 .grid{display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:56px}
 @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -48,7 +52,7 @@ box-shadow:var(--sh1);text-decoration:none;color:inherit;transition:transform .3
 .thumb{position:relative;aspect-ratio:16/10;background:var(--ink);color:var(--canvas);padding:18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
 .thumb::after{content:"";position:absolute;inset:auto -20% -60% auto;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.45),transparent 70%)}
 .thumb .kw{font-size:12px;font-weight:700;letter-spacing:.12em;color:#7DD3FC}
-.thumb .big{position:relative;z-index:1;font-size:26px;font-weight:800;line-height:1.2;letter-spacing:-.03em}
+.thumb .big{position:relative;z-index:1;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.03em}
 .thumb .tools{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:5px}
 .thumb .tools span{font-size:11px;font-weight:600;background:rgba(240,249,255,.12);border:1px solid rgba(240,249,255,.18);border-radius:999px;padding:3px 8px}
 .cbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -127,24 +131,22 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <div class="mesh"><section class="wrap hero"><span class="eyebrow">LIBRARY</span>
 <h1>영상에서 고른 도구,<br>여기서 따라 하세요</h1>
 <p class="sub">설치 명령, 바로 쓰는 요청문, 공식 화면까지 한 페이지에 모았어요. 전부 무료예요.</p>
-<div class="stats"><div class="stat"><b>4</b>실전 가이드</div><div class="stat"><b>20</b>도구</div><div class="stat"><b>58</b>바로 쓰는 요청문</div></div>
-</section></div><section class="wrap"><div class="keys">댓글 키워드로 바로 가기 <a class="chip" href="verify">검증</a><a class="chip" href="pick">추천</a><a class="chip" href="video">영상</a><a class="chip" href="tip">꿀팁</a></div><div class="grid"><a class="card" href="verify"><div class="thumb"><span class="kw">TOP 5 · 실전 가이드</span>
-<span class="big">댓글 키워드<br>「검증」</span><span class="tools"><span>ECC</span><span>Context7</span><span>Ponytail</span><span>UI UX Pro Max</span><span>Firecrawl</span></span></div>
-<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span>2026-10-31</div>
-<div class="ctitle">요즘 뜨는 자동화 도구 5</div><div class="cdesc">반복 작업과 코딩 에러를 줄여주는 도구예요.</div>
-<span class="btn">자료 보기 →</span></div></a><a class="card" href="pick"><div class="thumb"><span class="kw">TOP 5 · 실전 가이드</span>
-<span class="big">댓글 키워드<br>「추천」</span><span class="tools"><span>marketingskills</span><span>OpenMontage</span><span>claude-mem</span><span>claude-seo</span><span>hallmark</span></span></div>
-<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span>2026-10-30</div>
-<div class="ctitle">클로드 스킬 필수 추천 5</div><div class="cdesc">실무에 필요한 핵심 도구를 연결해 작업 효율을 높여요.</div>
-<span class="btn">자료 보기 →</span></div></a><a class="card" href="video"><div class="thumb"><span class="kw">TOP 5 · 실전 가이드</span>
-<span class="big">댓글 키워드<br>「영상」</span><span class="tools"><span>Qwen</span><span>Nano Banana</span><span>Kling AI</span><span>Higgsfield</span><span>Google Flow</span></span></div>
-<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span>2026-10-29</div>
-<div class="ctitle">숏폼 비용 줄이는 필수 꿀툴 5</div><div class="cdesc">무료 AI 도구로 촬영 없이 숏폼 이미지와 영상을 바로 만들어요.</div>
-<span class="btn">자료 보기 →</span></div></a><a class="card" href="tip"><div class="thumb"><span class="kw">TOP 5 · 실전 가이드</span>
-<span class="big">댓글 키워드<br>「꿀팁」</span><span class="tools"><span>Graphify</span><span>claude-mem</span><span>omni-route</span><span>headroom</span><span>answer-me-with-html</span></span></div>
-<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span>2026-10-28</div>
-<div class="ctitle">토큰 낭비 방지 무조건 쓸 툴 5</div><div class="cdesc">도구마다 원본을 압축하거나 지도로 만들어 다시 읽는 토큰을 줄여요.</div>
-<span class="btn">자료 보기 →</span></div></a></div></section>
+<div class="stats"><div class="stat"><b>3</b>실전 가이드</div><div class="stat"><b>15</b>도구</div><div class="stat"><b>43</b>바로 쓰는 요청문</div></div>
+</section></div><section class="wrap"><div class="keys"><button class="chip on" type="button" data-tag="">전체<small>3</small></button><button class="chip" type="button" data-tag="클로드 코드">클로드 코드<small>2</small></button><button class="chip" type="button" data-tag="영상">영상<small>1</small></button></div><div class="grid"><a class="card" href="pick" data-tag="클로드 코드"><div class="thumb"><span class="kw">TOP 5 · 클로드 코드</span>
+<span class="big">클로드 스킬 필수 추천 5</span><span class="tools"><span>marketingskills</span><span>OpenMontage</span><span>claude-mem</span><span>claude-seo</span><span>hallmark</span></span></div>
+<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span><span class="tag">클로드 코드</span>2026-10-30</div>
+<div class="ctitle">클로드 스킬 필수 추천 5</div><div class="cdesc">도구 5개, 설치 명령 5개부터 바로 쓰는 요청문 15개까지</div>
+<span class="btn">자료 보기 →</span></div></a><a class="card" href="video" data-tag="영상"><div class="thumb"><span class="kw">TOP 5 · 영상</span>
+<span class="big">숏폼 비용 줄이는 필수 꿀툴 5</span><span class="tools"><span>Qwen</span><span>Nano Banana</span><span>Kling AI</span><span>Higgsfield</span><span>Google Flow</span></span></div>
+<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span><span class="tag">영상</span>2026-10-29</div>
+<div class="ctitle">숏폼 비용 줄이는 필수 꿀툴 5</div><div class="cdesc">도구 5개, 설치 명령 1개부터 바로 쓰는 요청문 13개까지</div>
+<span class="btn">자료 보기 →</span></div></a><a class="card" href="tip" data-tag="클로드 코드"><div class="thumb"><span class="kw">TOP 5 · 클로드 코드</span>
+<span class="big">토큰 낭비 방지 무조건 쓸 툴 5</span><span class="tools"><span>Graphify</span><span>claude-mem</span><span>omni-route</span><span>headroom</span><span>answer-me-with-html</span></span></div>
+<div class="cbody"><div class="cmeta"><span class="tag">실전 가이드</span><span class="tag">클로드 코드</span>2026-10-28</div>
+<div class="ctitle">토큰 낭비 방지 무조건 쓸 툴 5</div><div class="cdesc">도구 5개, 설치 명령 5개부터 바로 쓰는 요청문 15개까지</div>
+<span class="btn">자료 보기 →</span></div></a></div></section><script>document.querySelectorAll('button.chip').forEach(b=>b.onclick=()=>{const t=b.dataset.tag;
+document.querySelectorAll('button.chip').forEach(x=>x.classList.toggle('on',x===b));
+document.querySelectorAll('.card').forEach(c=>c.hidden=!!t&&c.dataset.tag!==t)})</script>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>
