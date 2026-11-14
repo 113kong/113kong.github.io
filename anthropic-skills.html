@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>앤트로픽 공식 클로드 스킬 19개 — 한글 정리 · 113 자료실</title><meta name="description" content="클로드를 만든 앤트로픽이 직접 공개한 스킬 저장소예요. 스킬 19개가 들어 있고, 깃허브 별이 19만 개를 넘었어요. 영상에서 고른 다섯 개는 스킬 크리에이터·프런트엔드 디자인·웹앱 테스팅·MCP 빌더·문서 공동 작성이에요. 클로드 코드에서 플러그인 명령 두 줄로 깔고"><meta name="theme-color" content="#F0F9FF">
+<link rel="canonical" href="https://113kong.github.io/anthropic-skills"><meta property="og:type" content="website"><meta property="og:site_name" content="113 자료실">
+<meta property="og:locale" content="ko_KR"><meta property="og:title" content="앤트로픽 공식 클로드 스킬 19개 — 한글 정리 · 113 자료실"><meta property="og:description" content="클로드를 만든 앤트로픽이 직접 공개한 스킬 저장소예요. 스킬 19개가 들어 있고, 깃허브 별이 19만 개를 넘었어요. 영상에서 고른 다섯 개는 스킬 크리에이터·프런트엔드 디자인·웹앱 테스팅·MCP 빌더·문서 공동 작성이에요. 클로드 코드에서 플러그인 명령 두 줄로 깔고">
+<meta property="og:url" content="https://113kong.github.io/anthropic-skills"><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23082F49'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='800' fill='%23F0F9FF' text-anchor='middle'%3E113%3C/text%3E%3C/svg%3E"><style>
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Bold.woff2) format("woff2");font-weight:600 800;font-display:swap}
+:root{--canvas:#F0F9FF;--canvas-2:#F8FCFF;--tray:#DBE7EF;--tray-2:#E4EFF6;--card:#FFFFFF;--line:#C2D1DB;--line-soft:#DDE9F0;
+--ink:#082F49;--ink-2:#32536A;--mute:#557285;--faint:#98ACBA;--accent:#0369A1;--accent-strong:#035E90;--tint:#BAE6FD;--wash:#D8F0FE;
+--pos:#2A7A3B;--neg:#B0263F;--code:#0A1B27;
+--sh1:0 1px 3px rgba(8,47,73,.08);--sh2:0 15px 35px -12px rgba(8,47,73,.18),0 5px 15px -6px rgba(8,47,73,.08);
+--ease:cubic-bezier(.16,1,.3,1);--gut:16px}
+@media(min-width:720px){:root{--gut:32px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--canvas);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gut)}
+.nav{position:sticky;top:0;z-index:10;background:rgba(240,249,255,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line-soft)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.logo i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--canvas);font-style:normal;font-size:12px;letter-spacing:0}
+.nav nav{display:flex;gap:6px;align-items:center}
+.nav nav a{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-radius:999px}
+.nav nav a.on{background:var(--ink);color:var(--canvas)}
+.mesh{background:radial-gradient(80% 120% at 85% -20%,rgba(56,189,248,.28),transparent 60%),radial-gradient(60% 90% at 0% 0%,rgba(186,230,253,.55),transparent 65%)}
+.hero{padding-top:56px;padding-bottom:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent);background:var(--card);
+border:1px solid var(--line-soft);border-radius:999px;padding:5px 12px;box-shadow:var(--sh1)}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(30px,6.4vw,46px);font-weight:800;line-height:1.2;letter-spacing:-.035em;margin:16px 0 12px}
+.sub{font-size:17px;color:var(--ink-2);max-width:620px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.stat{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:10px 14px;box-shadow:var(--sh1);font-size:13px;color:var(--mute)}
+.stat b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.02em}
+.keys{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 22px;font-size:14px;color:var(--mute)}
+.chip{font-size:14px;font-weight:600;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+button.chip{font-family:inherit;cursor:pointer}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--canvas)}
+.chip small{font-size:12px;font-weight:500;opacity:.7;margin-left:4px}
+.card[hidden]{display:none}
+.grid{display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:56px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line-soft);border-radius:20px;overflow:hidden;
+box-shadow:var(--sh1);text-decoration:none;color:inherit;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.thumb{position:relative;aspect-ratio:16/10;background:var(--ink);color:var(--canvas);padding:18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.thumb::after{content:"";position:absolute;inset:auto -20% -60% auto;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.45),transparent 70%)}
+.thumb .kw{font-size:12px;font-weight:700;letter-spacing:.12em;color:#7DD3FC}
+.thumb .big{position:relative;z-index:1;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.03em}
+.thumb .tools{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:5px}
+.thumb .tools span{font-size:11px;font-weight:600;background:rgba(240,249,255,.12);border:1px solid rgba(240,249,255,.18);border-radius:999px;padding:3px 8px}
+.cbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cmeta{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--mute)}
+.tag{font-size:12px;font-weight:700;color:var(--accent);background:var(--wash);border-radius:6px;padding:2px 8px}
+.ctitle{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-.02em}
+.cdesc{font-size:14px;color:var(--ink-2);flex:1}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:6px;margin-top:6px;font-size:15px;font-weight:700;color:#fff;
+background:linear-gradient(135deg,#0B7BC0 0%,var(--accent) 50%,var(--accent-strong) 100%);border-radius:12px;padding:12px 16px;
+box-shadow:0 12px 24px -12px rgba(3,105,161,.7),0 2px 6px -1px rgba(3,94,144,.3);text-decoration:none}
+article{max-width:740px;margin:0 auto;padding:40px var(--gut) 24px}
+.meta{font-size:14px;color:var(--mute);margin-bottom:24px}
+.box{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:18px 20px;box-shadow:var(--sh1);margin:18px 0}
+.box h3{font-size:14px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:8px}
+.box ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.kv{width:100%;border-collapse:collapse;font-size:15px}
+.kv th{text-align:left;font-weight:700;color:var(--ink-2);white-space:nowrap;padding:10px 14px 10px 0;vertical-align:top;width:1%}
+.kv td{padding:10px 0;color:var(--ink)}
+.kv tr+tr th,.kv tr+tr td{border-top:1px solid var(--line-soft)}
+@media(max-width:480px){.kv th,.kv td{display:block;width:auto;padding:0}.kv th{padding-top:10px;font-size:13px;color:var(--mute)}.kv td{padding-bottom:10px}.kv tr+tr td{border-top:0}}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.toc a{font-size:13px;font-weight:600;color:var(--ink-2);background:var(--tray-2);border-radius:999px;padding:6px 12px;text-decoration:none}
+.toc a:hover{background:var(--wash);color:var(--accent)}
+h2{font-size:24px;font-weight:800;letter-spacing:-.025em;line-height:1.35;margin:52px 0 6px;scroll-margin-top:76px}
+h2 small{display:block;font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:4px}
+.lead{color:var(--ink-2);margin-bottom:14px}
+h4{font-size:15px;font-weight:700;margin:20px 0 8px}
+ol.steps{padding-left:22px;display:flex;flex-direction:column;gap:6px}
+ul.plain{padding-left:20px;display:flex;flex-direction:column;gap:6px}
+figure{margin:18px 0}
+figure img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:var(--sh2);background:var(--card)}
+figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+figcaption b{color:var(--ink-2);font-weight:700}
+.cmd{position:relative;margin:8px 0}
+.cmd pre{font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#E0F2FE;background:var(--code);border-radius:12px;padding:14px 78px 14px 16px;white-space:pre-wrap;word-break:break-all}
+.cmd.say pre{font-family:Pretendard,-apple-system,sans-serif;font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--line)}
+button.cp{position:absolute;top:9px;right:9px;font:600 12px Pretendard,-apple-system,sans-serif;color:var(--accent);background:var(--wash);border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
+.cmd:not(.say) button.cp{color:#E0F2FE;background:rgba(224,242,254,.12)}
+.warn{font-size:14px;color:var(--ink-2);background:var(--tray-2);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:14px}
+.rd{display:inline-block;font-weight:600;font-size:14px;margin:6px 0}
+table.rt{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;overflow:hidden}
+table.rt td{padding:12px 14px;vertical-align:top}
+table.rt tr+tr td{border-top:1px solid var(--line-soft)}
+table.rt td:first-child{font-weight:700;color:var(--accent);width:34%}
+@media(max-width:480px){table.rt td{display:block;width:auto!important}table.rt td:first-child{padding-bottom:0}table.rt td:last-child{padding-top:4px}}
+details.faq{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;margin-bottom:8px}
+details.faq summary{cursor:pointer;list-style:none;padding:14px 44px 14px 16px;font-weight:700;position:relative}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:12px;font-size:20px;color:var(--accent);transition:transform .3s var(--ease)}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq p{padding:0 16px 16px;color:var(--ink-2)}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft);text-decoration:none;color:var(--ink)}
+.links a span{font-size:13px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cta{margin-top:56px;padding:26px 22px;border-radius:22px;background:var(--ink);color:var(--canvas)}
+.cta h2{margin:0 0 6px;color:var(--canvas)}
+.cta p{color:#B6CEDF;font-size:15px}
+.cgrid{display:grid;gap:10px;margin-top:18px}
+@media(min-width:640px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+.cgrid a{display:block;background:rgba(240,249,255,.07);border:1px solid rgba(240,249,255,.14);border-radius:14px;padding:14px;color:var(--canvas);text-decoration:none;transition:background .3s var(--ease)}
+.cgrid a:hover{background:rgba(240,249,255,.13)}
+.cgrid b{display:block;font-size:15px;margin-bottom:2px}
+.cgrid span{font-size:13px;color:#B6CEDF}
+details.grp{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;margin-bottom:8px}
+details.grp summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between}
+details.grp summary::-webkit-details-marker{display:none}
+details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
+.row{border-top:1px solid var(--line-soft);padding:14px 16px}
+.row a.nm{font-weight:700;text-decoration:none}
+.row .does{font-size:14px;color:var(--ink-2);margin:2px 0 6px}
+footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+</style></head>
+<body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<div class="mesh"><article><span class="eyebrow">클로드 코드</span>
+<h1>앤트로픽 공식 클로드 스킬 19개 — 한글 정리</h1>
+<p class="meta">2026-11-20 · 별 19.4만</p>
+<div class="box"><ul><li>클로드를 만든 앤트로픽이 직접 공개한 스킬 저장소예요. 스킬 19개가 들어 있고, 깃허브 별이 19만 개를 넘었어요.</li><li>영상에서 고른 다섯 개는 스킬 크리에이터·프런트엔드 디자인·웹앱 테스팅·MCP 빌더·문서 공동 작성이에요.</li><li>클로드 코드에서 플러그인 명령 두 줄로 깔고, 쓸 때는 스킬 이름을 말하면 돼요.</li></ul></div></article></div>
+<article style="padding-top:0">
+<figure><img src="img/anthropic-skills/01-anthropic-skills.jpg" alt="anthropics/skills 공식 화면" loading="lazy" width="1400" height="1166"></figure>
+<h2>설치</h2>
+<h4>1. 마켓 추가</h4><div class="cmd"><pre>/plugin marketplace add anthropics/skills</pre><button class="cp" type="button">복사</button></div>
+<h4>2. 예시 스킬 설치(영상의 다섯 개 포함)</h4><div class="cmd"><pre>/plugin install example-skills@anthropic-agent-skills</pre><button class="cp" type="button">복사</button></div>
+<h4>3. 문서 스킬 설치(선택: 워드·엑셀·PPT·PDF)</h4><div class="cmd"><pre>/plugin install document-skills@anthropic-agent-skills</pre><button class="cp" type="button">복사</button></div>
+<h2>쓰는 법</h2>
+<ol class="steps"><li>클로드 코드 안에서 위 명령을 차례로 입력하고, 클로드 코드를 새로 열어요.</li><li>&quot;스킬 크리에이터로 영수증 정리 스킬 만들어 줘&quot;처럼 스킬 이름을 넣어 말하면 그 스킬이 켜져요.</li><li>웹앱 테스팅은 내 컴퓨터에서 돌아가는 웹앱(localhost)을 Playwright로 열어 눌러 보고 스크린샷을 남겨요.</li></ol>
+<h2>스킬 19개</h2>
+<ul style="padding-left:22px"><li><b>skill-creator (스킬 크리에이터)</b> — 원하는 기능을 말로 설명하면 나만의 스킬을 만들고, 고치고, 성능까지 재 봐요.</li><li><b>frontend-design (프런트엔드 디자인)</b> — 흔한 AI 템플릿 티가 나지 않게 화면 방향·글꼴·배치를 먼저 정하고 만들어요.</li><li><b>webapp-testing (웹앱 테스팅)</b> — Playwright로 내 웹앱을 열어 버튼을 눌러 보고 스크린샷·브라우저 로그를 남겨요.</li><li><b>mcp-builder (MCP 빌더)</b> — 외부 서비스 API를 클로드에 잇는 MCP 서버를 Python·TypeScript로 만들어요.</li><li><b>doc-coauthoring (문서 공동 작성)</b> — 기획서·제안서·기술 문서를 질문 → 초안 → 다듬기 단계로 함께 써요.</li><li><b>docx (워드)</b> — 워드 문서를 만들고 읽고 고쳐요(목차·표·머리글 포함).</li><li><b>xlsx (엑셀)</b> — 엑셀·CSV를 열어 고치고, 수식·차트가 든 표를 새로 만들어요.</li><li><b>pptx (파워포인트)</b> — 발표 자료를 만들거나 기존 PPT 내용을 읽고 고쳐요.</li><li><b>pdf (PDF)</b> — PDF 글·표 꺼내기, 합치기·나누기, 양식 채우기를 해요.</li><li><b>algorithmic-art (알고리즘 아트)</b> — p5.js 코드로 생성형 그림(흐름장·입자)을 만들어요.</li><li><b>canvas-design (캔버스 디자인)</b> — 포스터 같은 정지 그림을 PNG·PDF로 만들어요.</li><li><b>theme-factory (테마 공장)</b> — 슬라이드·문서·랜딩 페이지에 미리 만든 테마 10개 중 하나를 입혀요.</li><li><b>brand-guidelines (브랜드 가이드)</b> — 앤트로픽 공식 색·글꼴을 결과물에 입혀요(내 회사 버전을 만들 때 본보기).</li><li><b>internal-comms (사내 소통)</b> — 주간 보고·공지·사내 뉴스레터를 회사 형식에 맞춰 써요.</li><li><b>slack-gif-creator (슬랙 GIF)</b> — 슬랙에 맞는 크기·길이의 움직이는 GIF를 만들어요.</li><li><b>web-artifacts-builder (웹 아티팩트)</b> — React·Tailwind로 여러 화면이 있는 claude.ai 아티팩트를 만들어요.</li><li><b>claude-api (클로드 API)</b> — 클로드 API·SDK로 앱을 만들 때 모델 이름·요금·기능을 바로 찾아 줘요.</li><li><b>academy-guide (아카데미 안내)</b> — 클로드 쓰는 법을 물으면 맞는 Claude Academy 강의를 골라 줘요.</li><li><b>discernment-nudge (한 번 더 생각)</b> — 중요한 조언·초안을 준 뒤, 그대로 믿기 전에 확인할 점을 짚어 줘요.</li></ul>
+<p class="warn">앤트로픽은 이 저장소가 시연·학습용이라고 적었어요. 중요한 일에 쓰기 전에 내 환경에서 먼저 시험해 보세요. 라이선스는 Apache 2.0이에요.</p>
+<div class="links"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills <span>github.com/anthropics/skills ↗</span></a></div>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a></div></section></article>
+<footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
+const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
+setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>
