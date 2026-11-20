@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">실전 가이드 · 클로드 코드</span>
 <h1>클로드 코드 규칙부터 비용까지, 내장 기능 5개</h1>
-<p class="meta">2026-10-31 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 5개</p>
+<p class="meta">2026-10-31 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 5개 <a class="yt-btn" href="https://www.youtube.com/shorts/dCWnyyR0Ohk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><h3>30초 요약</h3><ul><li>프로젝트에 맞는 규칙 파일을 자동으로 만들어줘요.</li><li>작업 기억과 낡은 지침을 스스로 검사하고 정리해요.</li><li>화면에 비용을 띄우고 생각 깊이를 조절해 요금을 아껴요.</li></ul></div>
 <div class="box"><table class="kv"><tr><th>이런 분께</th><td>클로드 코드로 개발과 업무를 효율화하고 비용을 아끼려는 1인 사업자와 직장인</td></tr><tr><th>클로드 플랜</th><td>공식 문서에서 확인하세요</td></tr><tr><th>터미널</th><td>macOS, Linux 또는 Windows 터미널 환경이 필요해요</td></tr><tr><th>설치 도구</th><td>상태표시줄 JSON 처리를 위해 jq 도구가 필요할 수 있어요</td></tr></table></div>
 <nav class="toc"><a href="#s1">1. 시작 전 준비</a><a href="#s2">2. /init</a><a href="#s3">3. 자동 메모리</a><a href="#s4">4. /doctor prompt-audit</a><a href="#s5">5. /statusline</a><a href="#s6">6. /effort</a><a href="#s7">7. 이어 쓰기 루틴</a><a href="#s8">8. 자주 묻는 질문</a><a href="#s9">9. 공식 링크</a></nav></article></div><article style="padding-top:0">
@@ -204,9 +208,10 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <h2 id="s8">8. 자주 묻는 질문</h2><details class="faq"><summary>/init으로 만든 규칙 파일은 어디에 저장되나요?</summary><p>프로젝트 루트의 CLAUDE.md 또는 .claude 폴더 안에 저장돼요. 팀원들과 공유할 공통 규칙은 이 파일에 적어두면 돼요.</p></details><details class="faq"><summary>자동 메모리에 적힌 내용을 직접 지울 수 있나요?</summary><p>/memory 명령어를 입력하면 저장된 메모리 목록을 보고 편집할 수 있어요. 잘못 들어간 내용은 직접 열어서 지우면 돼요.</p></details><details class="faq"><summary>상태표시줄이 화면에 바로 안 뜨면 어떻게 하나요?</summary><p>~/.claude/settings.json 설정에 command 경로가 맞는지 보세요. 스크립트 실행 권한(chmod +x)과 jq 설치 여부도 확인하세요.</p></details><details class="faq"><summary>추론 깊이를 높이면 비용이 많이 나오나요?</summary><p>생각하는 토큰이 늘어나므로 세션 비용이 더 들 수 있어요. 단순 작업은 기본이나 낮은 모드로 두고 어려운 문제에만 높이세요.</p></details>
 <h2 id="s9">9. 공식 링크</h2><div class="links"><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">/init <span>code.claude.com/docs/en/memory ↗</span></a><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">자동 메모리 <span>code.claude.com/docs/en/memory ↗</span></a><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">/doctor prompt-audit <span>code.claude.com/docs/en/memory ↗</span></a><a href="https://code.claude.com/docs/en/statusline" target="_blank" rel="noopener">/statusline <span>code.claude.com/docs/en/statusline ↗</span></a><a href="https://code.claude.com/docs/en/model-config" target="_blank" rel="noopener">/effort <span>code.claude.com/docs/en/model-config ↗</span></a></div>
 <section class="cta"><h2>이 자료가 도움이 됐다면</h2><p>매주 새 도구를 영상으로 고르고, 따라 하는 법은 여기에 쌓아요.</p>
-<div class="cgrid"><a href="https://www.youtube.com/@113dchallenge?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 TOP5가 나오면 바로 봐요</span></a>
+<div class="cgrid"><a href="https://www.youtube.com/@113kongai?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 영상 바로 보기</span></a>
 <a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a>
-<a href="https://www.youtube.com/@113dchallenge/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
+<a href="https://www.youtube.com/shorts/dCWnyyR0Ohk" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a>
+<a href="https://www.youtube.com/@113kongai/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

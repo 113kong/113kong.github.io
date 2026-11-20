@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">실전 가이드 · 유튜브 자동화</span>
 <h1>유튜브 대본부터 예약까지, 무료 도구 5개</h1>
-<p class="meta">2026-10-30 · 도구 5개 · 바로 쓰는 요청문 13개 · 설치 명령 3개</p>
+<p class="meta">2026-10-30 · 도구 5개 · 바로 쓰는 요청문 13개 · 설치 명령 3개 <a class="yt-btn" href="https://www.youtube.com/shorts/Q0nGmgFF0G4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><h3>30초 요약</h3><ul><li>유튜브 대본부터 예약까지 다섯 도구로 끝내요.</li><li>모든 도구는 무료나 오픈소스로 시작할 수 있어요.</li><li>도구마다 역할을 나누어 자동 파이프라인을 만들어요.</li></ul></div>
 <div class="box"><table class="kv"><tr><th>이런 분께</th><td>유튜브 제작 시간을 아끼고 싶은 1인 사업자와 직장인이에요.</td></tr><tr><th>컴퓨터 환경</th><td>명령어를 입력할 터미널과 파이썬 환경이 필요해요.</td></tr><tr><th>런타임 도구</th><td>공식 문서 기준 Node.js 22 이상과 FFmpeg가 필요해요.</td></tr><tr><th>서비스 계정</th><td>구글 계정과 클로드 사용 환경이 필요해요.</td></tr></table></div>
 <nav class="toc"><a href="#s1">1. 시작 전 준비</a><a href="#s2">2. youtube-agent-skill</a><a href="#s3">3. Google Flow</a><a href="#s4">4. Qwen3-TTS</a><a href="#s5">5. HyperFrames</a><a href="#s6">6. YouTube Data API</a><a href="#s7">7. 이어 쓰기 루틴</a><a href="#s8">8. 자주 묻는 질문</a><a href="#s9">9. 공식 링크</a></nav></article></div><article style="padding-top:0">
@@ -202,9 +206,10 @@ claude plugin install hyperframes@hyperframes</pre><button class="cp" type="butt
 <h2 id="s8">8. 자주 묻는 질문</h2><details class="faq"><summary>코딩을 전혀 몰라도 모든 도구를 쓸 수 있나요?</summary><p>웹 화면을 쓰는 도구도 있지만 일부 도구는 명령어 입력이 필요해요. 인공지능 코딩 도구의 안내를 받으며 설치하면 따라갈 수 있어요.</p></details><details class="faq"><summary>유튜브 업로드가 완전히 무인으로 진행되나요?</summary><p>대본 생성 도구는 결과물 검토를 거치도록 설계되어 있어요. 최종 확인을 마친 뒤 API 스크립트로 업로드를 실행하세요.</p></details><details class="faq"><summary>영상 렌더링 오류가 나면 어떻게 하나요?</summary><p>컴퓨터에 Node.js 22 이상과 FFmpeg가 설치되었는지 확인하세요. 자세한 설치 규격은 공식 문서에서 확인하세요.</p></details><details class="faq"><summary>API 하루 무료 사용량이 초과되면 어쩌죠?</summary><p>공식 문서의 할당량 계산기로 하루 사용량을 점검하세요. 더 많은 작업이 필요하면 사용량 한도 정책을 공식 문서에서 확인하세요.</p></details>
 <h2 id="s9">9. 공식 링크</h2><div class="links"><a href="https://github.com/Jakeschincariol/youtube-agent-skill" target="_blank" rel="noopener">youtube-agent-skill <span>github.com/Jakeschincariol/youtube-agent-skill ↗</span></a><a href="https://labs.google/flow" target="_blank" rel="noopener">Google Flow <span>labs.google/flow ↗</span></a><a href="https://github.com/QwenLM/Qwen3-TTS" target="_blank" rel="noopener">Qwen3-TTS <span>github.com/QwenLM/Qwen3-TTS ↗</span></a><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">HyperFrames <span>github.com/heygen-com/hyperframes ↗</span></a><a href="https://developers.google.com/youtube/v3" target="_blank" rel="noopener">YouTube Data API <span>developers.google.com/youtube/v3 ↗</span></a></div>
 <section class="cta"><h2>이 자료가 도움이 됐다면</h2><p>매주 새 도구를 영상으로 고르고, 따라 하는 법은 여기에 쌓아요.</p>
-<div class="cgrid"><a href="https://www.youtube.com/@113dchallenge?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 TOP5가 나오면 바로 봐요</span></a>
+<div class="cgrid"><a href="https://www.youtube.com/@113kongai?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 영상 바로 보기</span></a>
 <a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a>
-<a href="https://www.youtube.com/@113dchallenge/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
+<a href="https://www.youtube.com/shorts/Q0nGmgFF0G4" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a>
+<a href="https://www.youtube.com/@113kongai/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

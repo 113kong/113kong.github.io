@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">클로드 코드</span>
 <h1>앤트로픽 공식 클로드 스킬 19개 — 한글 정리</h1>
-<p class="meta">2026-11-20 · 별 19.4만</p>
+<p class="meta">2026-11-20 · 별 19.4만 <a class="yt-btn" href="https://www.youtube.com/shorts/e4CmpDTeu18" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><ul><li>클로드를 만든 앤트로픽이 직접 공개한 스킬 저장소예요. 스킬 19개가 들어 있고, 깃허브 별이 19만 개를 넘었어요.</li><li>영상에서 고른 다섯 개는 스킬 크리에이터·프런트엔드 디자인·웹앱 테스팅·MCP 빌더·문서 공동 작성이에요.</li><li>클로드 코드에서 플러그인 명령 두 줄로 깔고, 쓸 때는 스킬 이름을 말하면 돼요.</li></ul></div></article></div>
 <article style="padding-top:0">
 <figure><img src="img/anthropic-skills/01-anthropic-skills.jpg" alt="anthropics/skills 공식 화면" loading="lazy" width="1400" height="1166"></figure>
@@ -144,7 +148,7 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <ul style="padding-left:22px"><li><b>skill-creator (스킬 크리에이터)</b> — 원하는 기능을 말로 설명하면 나만의 스킬을 만들고, 고치고, 성능까지 재 봐요.</li><li><b>frontend-design (프런트엔드 디자인)</b> — 흔한 AI 템플릿 티가 나지 않게 화면 방향·글꼴·배치를 먼저 정하고 만들어요.</li><li><b>webapp-testing (웹앱 테스팅)</b> — Playwright로 내 웹앱을 열어 버튼을 눌러 보고 스크린샷·브라우저 로그를 남겨요.</li><li><b>mcp-builder (MCP 빌더)</b> — 외부 서비스 API를 클로드에 잇는 MCP 서버를 Python·TypeScript로 만들어요.</li><li><b>doc-coauthoring (문서 공동 작성)</b> — 기획서·제안서·기술 문서를 질문 → 초안 → 다듬기 단계로 함께 써요.</li><li><b>docx (워드)</b> — 워드 문서를 만들고 읽고 고쳐요(목차·표·머리글 포함).</li><li><b>xlsx (엑셀)</b> — 엑셀·CSV를 열어 고치고, 수식·차트가 든 표를 새로 만들어요.</li><li><b>pptx (파워포인트)</b> — 발표 자료를 만들거나 기존 PPT 내용을 읽고 고쳐요.</li><li><b>pdf (PDF)</b> — PDF 글·표 꺼내기, 합치기·나누기, 양식 채우기를 해요.</li><li><b>algorithmic-art (알고리즘 아트)</b> — p5.js 코드로 생성형 그림(흐름장·입자)을 만들어요.</li><li><b>canvas-design (캔버스 디자인)</b> — 포스터 같은 정지 그림을 PNG·PDF로 만들어요.</li><li><b>theme-factory (테마 공장)</b> — 슬라이드·문서·랜딩 페이지에 미리 만든 테마 10개 중 하나를 입혀요.</li><li><b>brand-guidelines (브랜드 가이드)</b> — 앤트로픽 공식 색·글꼴을 결과물에 입혀요(내 회사 버전을 만들 때 본보기).</li><li><b>internal-comms (사내 소통)</b> — 주간 보고·공지·사내 뉴스레터를 회사 형식에 맞춰 써요.</li><li><b>slack-gif-creator (슬랙 GIF)</b> — 슬랙에 맞는 크기·길이의 움직이는 GIF를 만들어요.</li><li><b>web-artifacts-builder (웹 아티팩트)</b> — React·Tailwind로 여러 화면이 있는 claude.ai 아티팩트를 만들어요.</li><li><b>claude-api (클로드 API)</b> — 클로드 API·SDK로 앱을 만들 때 모델 이름·요금·기능을 바로 찾아 줘요.</li><li><b>academy-guide (아카데미 안내)</b> — 클로드 쓰는 법을 물으면 맞는 Claude Academy 강의를 골라 줘요.</li><li><b>discernment-nudge (한 번 더 생각)</b> — 중요한 조언·초안을 준 뒤, 그대로 믿기 전에 확인할 점을 짚어 줘요.</li></ul>
 <p class="warn">앤트로픽은 이 저장소가 시연·학습용이라고 적었어요. 중요한 일에 쓰기 전에 내 환경에서 먼저 시험해 보세요. 라이선스는 Apache 2.0이에요.</p>
 <div class="links"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills <span>github.com/anthropics/skills ↗</span></a></div>
-<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a></div></section></article>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a><a href="https://www.youtube.com/shorts/e4CmpDTeu18" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">실전 가이드 · 클로드 코드</span>
 <h1>토큰 낭비 방지 무조건 쓸 툴 5</h1>
-<p class="meta">2026-10-28 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 5개</p>
+<p class="meta">2026-10-28 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 5개 <a class="yt-btn" href="https://www.youtube.com/shorts/RX5fKN9KT9g" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><h3>30초 요약</h3><ul><li>도구마다 원본을 압축하거나 지도로 만들어 다시 읽는 토큰을 줄여요.</li><li>세션 메모리와 외부 무료 모델을 연결해 불필요한 비용을 막아요.</li><li>결과를 한 장의 웹 문서로 받아 출력 토큰과 반복 질문을 줄여요.</li></ul></div>
 <div class="box"><table class="kv"><tr><th>이런 분께</th><td>매달 나가는 클로드 토큰 요금을 실질적으로 줄이고 싶은 초보 1인 사업자예요.</td></tr><tr><th>클로드 환경</th><td>Claude Code 또는 지원 도구가 설치된 환경이 필요해요.</td></tr><tr><th>터미널 환경</th><td>명령어를 입력할 수 있는 기본 터미널 프로그램이 필요해요.</td></tr><tr><th>런타임 도구</th><td>공식 문서 기준 Python 또는 Node.js 환경이 필요해요.</td></tr></table></div>
 <nav class="toc"><a href="#s1">1. 시작 전 준비</a><a href="#s2">2. Graphify</a><a href="#s3">3. claude-mem</a><a href="#s4">4. omni-route</a><a href="#s5">5. headroom</a><a href="#s6">6. answer-me-with-html</a><a href="#s7">7. 이어 쓰기 루틴</a><a href="#s8">8. 자주 묻는 질문</a><a href="#s9">9. 공식 링크</a></nav></article></div><article style="padding-top:0">
@@ -208,9 +212,10 @@ headroom wrap claude</pre><button class="cp" type="button">복사</button></div>
 <h2 id="s8">8. 자주 묻는 질문</h2><details class="faq"><summary>도구를 설치하면 기존 클로드 코드가 느려지지 않나요?</summary><p>로컬 파싱과 압축 처리는 매우 짧은 시간에 완료돼요. 전송되는 데이터양이 줄어들어 오히려 응답 체감 속도는 빨라져요.</p></details><details class="faq"><summary>압축 과정에서 중요한 소스 코드나 정보가 유실되면 어떡하나요?</summary><p>구조 분석과 문맥 보존 알고리즘을 사용해 핵심 정보를 남겨요. 원본이 필요한 경우 로컬 캐시에서 되살릴 수 있어요.</p></details><details class="faq"><summary>비개발자나 1인 사업자도 터미널에서 쉽게 쓸 수 있나요?</summary><p>안내된 한 줄 설치 명령어를 복사해 터미널에 붙여넣기만 하면 돼요. 이후에는 평소처럼 대화창에서 명령어나 자연어로 지시하세요.</p></details><details class="faq"><summary>여러 도구를 한꺼번에 설치해서 같이 써도 충돌이 없나요?</summary><p>각 도구는 프록시, 메모리, 시각화 등 담당하는 계층이 달라요. 공식 가이드에 맞춰 순서대로 연동하면 함께 사용할 수 있어요.</p></details>
 <h2 id="s9">9. 공식 링크</h2><div class="links"><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">Graphify <span>github.com/Graphify-Labs/graphify ↗</span></a><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">claude-mem <span>github.com/thedotmack/claude-mem ↗</span></a><a href="https://github.com/cheaper-inference/OmniRoute" target="_blank" rel="noopener">omni-route <span>github.com/cheaper-inference/OmniRoute ↗</span></a><a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">headroom <span>github.com/headroomlabs-ai/headroom ↗</span></a><a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">answer-me-with-html <span>github.com/QingYunA/answer-me-with-html ↗</span></a></div>
 <section class="cta"><h2>이 자료가 도움이 됐다면</h2><p>매주 새 도구를 영상으로 고르고, 따라 하는 법은 여기에 쌓아요.</p>
-<div class="cgrid"><a href="https://www.youtube.com/@113dchallenge?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 TOP5가 나오면 바로 봐요</span></a>
+<div class="cgrid"><a href="https://www.youtube.com/@113kongai?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 영상 바로 보기</span></a>
 <a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a>
-<a href="https://www.youtube.com/@113dchallenge/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
+<a href="https://www.youtube.com/shorts/RX5fKN9KT9g" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a>
+<a href="https://www.youtube.com/@113kongai/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

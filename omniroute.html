@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">클로드 코드</span>
 <h1>옴니라우트 — 한도 끝나면 다른 모델로 자동 전환</h1>
-<p class="meta">2026-11-18 · 별 8.7만</p>
+<p class="meta">2026-11-18 · 별 8.7만 <a class="yt-btn" href="https://www.youtube.com/shorts/7H6mXsWjx8s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><ul><li>AI 제공자 380곳을 내 컴퓨터의 주소 하나(localhost:20128)로 묶는 무료 오픈소스 게이트웨이예요(MIT).</li><li>구독 → API 키 → 저가 → 무료 순서로 네 층을 두고, 앞 층 한도가 끝나면 다음 층으로 넘겨 작업을 이어 가요.</li><li>무료 제공자는 150곳이 넘지만, 계정·키는 내가 직접 만들고 각 서비스 약관을 따라야 해요.</li></ul></div></article></div>
 <article style="padding-top:0">
 <figure><img src="img/omniroute/01-omniroute.jpg" alt="OmniRoute 공식 화면" loading="lazy" width="1280" height="800"></figure>
@@ -142,7 +146,7 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <ol class="steps"><li>설치하고 실행하면 대시보드가 열려요(기본 주소 localhost:20128). 제공자 화면에서 쓸 곳을 골라 내 계정이나 API 키를 연결해요.</li><li>Dashboard → Endpoints에서 옴니라우트 키를 복사하고, 모델을 auto로 두면 연결한 곳 중에서 알아서 골라요.</li><li>omniroute configure claude로 클로드 코드를 이 주소로 돌려요. 무료 한도만 쓰고 싶으면 대시보드의 Free Tiers 화면에서 남은 양을 봐요.</li></ol>
 <p class="warn">무료 사용량은 옴니라우트가 주는 게 아니라 각 제공자의 무료 등급을 합친 추정치예요. 서비스마다 약관이 달라서, 공식으로 허용된 무료 키만 쓰세요(약관 위험으로 표시된 곳은 자동 경로에서 빠져 있어요).</p>
 <div class="links"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" rel="noopener">OmniRoute <span>github.com/diegosouzapw/OmniRoute ↗</span></a></div>
-<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a></div></section></article>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a><a href="https://www.youtube.com/shorts/7H6mXsWjx8s" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

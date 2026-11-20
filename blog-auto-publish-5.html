@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">실전 가이드 · 블로그</span>
 <h1>네이버 블로그 글감부터 발행까지 맡기는 법</h1>
-<p class="meta">2026-11-01 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 1개</p>
+<p class="meta">2026-11-01 · 도구 5개 · 바로 쓰는 요청문 15개 · 설치 명령 1개 <a class="yt-btn" href="https://www.youtube.com/shorts/-qtvsUsYHk0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><h3>30초 요약</h3><ul><li>네이버 데이터랩으로 인기 검색어와 트렌드를 먼저 확인해요.</li><li>작성한 글은 humanizer로 다듬고 업리카로 자동 발행해요.</li><li>티스토리·워드프레스라면 서치어드바이저로 수집 상태를 점검해요.</li></ul></div>
 <div class="box"><table class="kv"><tr><th>이런 분께</th><td>블로그 글감 찾기부터 작성과 등록까지 자동화하고 싶은 1인 사업자예요.</td></tr><tr><th>네이버 계정</th><td>데이터랩과 서치어드바이저 조회를 위해 필요해요.</td></tr><tr><th>업리카 계정</th><td>네이버 블로그 채널 연동을 위해 준비하세요.</td></tr><tr><th>Claude 유료 플랜</th><td>Claude in Chrome 확장 프로그램 실행에 필요해요.</td></tr><tr><th>터미널 환경</th><td>humanizer 스킬 설치 명령을 입력할 때 써요.</td></tr></table></div>
 <nav class="toc"><a href="#s1">1. 시작 전 준비</a><a href="#s2">2. 업리카</a><a href="#s3">3. Claude in Chrome</a><a href="#s4">4. humanizer</a><a href="#s5">5. 네이버 데이터랩</a><a href="#s6">6. 네이버 서치어드바이저</a><a href="#s7">7. 이어 쓰기 루틴</a><a href="#s8">8. 자주 묻는 질문</a><a href="#s9">9. 공식 링크</a></nav></article></div><article style="padding-top:0">
@@ -201,9 +205,10 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <h2 id="s8">8. 자주 묻는 질문</h2><details class="faq"><summary>업리카 무료 이용 건수를 다 쓰면 어떻게 되나요?</summary><p>무료 플랜은 월 20건까지 제공돼요. 더 많이 쓰려면 요금제 변경을 공식 문서에서 확인하세요.</p></details><details class="faq"><summary>Claude in Chrome은 무료 플랜에서도 쓸 수 있나요?</summary><p>유료 플랜 이용자만 사용할 수 있어요. 무료 플랜 이용자는 플랜 업그레이드가 필요해요.</p></details><details class="faq"><summary>humanizer를 쓰면 AI 탐지기를 완벽히 피할 수 있나요?</summary><p>AI 탐지기 통과를 목적으로 만든 도구가 아니에요. 탐지기에 여전히 감지될 수 있어요.</p></details><details class="faq"><summary>네이버 데이터랩 통계가 화면에 안 나올 땐 어떻게 하나요?</summary><p>일시적인 API 호출 오류일 수 있어요. 잠시 기다렸다가 다시 조회해 보세요.</p></details>
 <h2 id="s9">9. 공식 링크</h2><div class="links"><a href="https://uplika.com" target="_blank" rel="noopener">업리카 <span>uplika.com ↗</span></a><a href="https://claude.com/chrome" target="_blank" rel="noopener">Claude in Chrome <span>claude.com/chrome ↗</span></a><a href="https://github.com/blader/humanizer" target="_blank" rel="noopener">humanizer <span>github.com/blader/humanizer ↗</span></a><a href="https://datalab.naver.com" target="_blank" rel="noopener">네이버 데이터랩 <span>datalab.naver.com ↗</span></a><a href="https://searchadvisor.naver.com" target="_blank" rel="noopener">네이버 서치어드바이저 <span>searchadvisor.naver.com ↗</span></a></div>
 <section class="cta"><h2>이 자료가 도움이 됐다면</h2><p>매주 새 도구를 영상으로 고르고, 따라 하는 법은 여기에 쌓아요.</p>
-<div class="cgrid"><a href="https://www.youtube.com/@113dchallenge?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 TOP5가 나오면 바로 봐요</span></a>
+<div class="cgrid"><a href="https://www.youtube.com/@113kongai?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 영상 바로 보기</span></a>
 <a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a>
-<a href="https://www.youtube.com/@113dchallenge/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
+<a href="https://www.youtube.com/shorts/-qtvsUsYHk0" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a>
+<a href="https://www.youtube.com/@113kongai/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

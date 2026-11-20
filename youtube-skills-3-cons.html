@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">실전 가이드 · 유튜브 자동화</span>
 <h1>남들 다 추천하는 유튜브 자동화 스킬 3개, 단점까지</h1>
-<p class="meta">2026-11-01 · 도구 3개 · 바로 쓰는 요청문 9개 · 설치 명령 0개</p>
+<p class="meta">2026-11-01 · 도구 3개 · 바로 쓰는 요청문 9개 · 설치 명령 0개 <a class="yt-btn" href="https://www.youtube.com/shorts/_G56BTdk1JY" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><h3>30초 요약</h3><ul><li>깐다고 바로 되는 도구는 없어요. 설정과 판단은 결국 내 몫이에요.</li><li>HyperFrames·youtube-agent-skill·OpenMontage는 자동화해 주는 범위가 서로 달라요.</li><li>한 번 공들여 셋팅해 두면 셋 다 혼자 하는 영상 제작을 크게 덜어 줘요.</li></ul></div>
 <div class="box"><table class="kv"><tr><th>이런 분께</th><td>유튜브 자동화 도구로 콘텐츠를 만들려는 1인 사업자와 직장인에게 맞아요.</td></tr><tr><th>AI 코딩 어시스턴트</th><td>Claude Code나 Cursor 같은 에이전트 도구가 필요해요.</td></tr><tr><th>Node.js 및 Python</th><td>공식 문서에 적힌 Node.js와 Python 환경을 갖춰야 해요.</td></tr><tr><th>FFmpeg</th><td>영상 렌더링과 처리를 위해 컴퓨터에 설치해야 해요.</td></tr></table></div>
 <nav class="toc"><a href="#s1">1. 시작 전 준비</a><a href="#s2">2. HyperFrames</a><a href="#s3">3. youtube-agent-skill</a><a href="#s4">4. OpenMontage</a><a href="#s5">5. 이어 쓰기 루틴</a><a href="#s6">6. 자주 묻는 질문</a><a href="#s7">7. 공식 링크</a></nav></article></div><article style="padding-top:0">
@@ -175,9 +179,10 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <h2 id="s6">6. 자주 묻는 질문</h2><details class="faq"><summary>명령어만 넣으면 유튜브 채널에 영상이 알아서 올라가나요?</summary><p>도구들은 제작과 기획을 도울 뿐 자동 업로드는 지원하지 않아요. 완성된 결과물을 직접 확인하고 유튜브 스튜디오에 올려야 해요.</p></details><details class="faq"><summary>코딩을 전혀 모르는 초보자도 바로 쓸 수 있나요?</summary><p>Node.js나 Python 같은 기본 설치 과정을 거쳐야 해요. AI 코딩 에이전트 사용법을 먼저 익힌 뒤 다루시는 것을 권해요.</p></details><details class="faq"><summary>도구를 설치했는데 실행 시 오류가 나면 어떻게 하나요?</summary><p>FFmpeg 프로그램이 컴퓨터에 제대로 설치되어 있는지 먼저 확인하세요. 도구별 필수 환경 요구사항은 각 공식 문서에서 확인하세요.</p></details><details class="faq"><summary>완성된 영상의 품질이 기대보다 낮은 이유는 무엇인가요?</summary><p>도구가 모든 기획을 알아서 창작해 주지는 못해요. 내 채널의 말투 파일이나 세부 지시문을 구체적으로 보완해 보세요.</p></details>
 <h2 id="s7">7. 공식 링크</h2><div class="links"><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">HyperFrames <span>github.com/heygen-com/hyperframes ↗</span></a><a href="https://github.com/Jakeschincariol/youtube-agent-skill" target="_blank" rel="noopener">youtube-agent-skill <span>github.com/Jakeschincariol/youtube-agent-skill ↗</span></a><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">OpenMontage <span>github.com/calesthio/OpenMontage ↗</span></a></div>
 <section class="cta"><h2>이 자료가 도움이 됐다면</h2><p>매주 새 도구를 영상으로 고르고, 따라 하는 법은 여기에 쌓아요.</p>
-<div class="cgrid"><a href="https://www.youtube.com/@113dchallenge?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 TOP5가 나오면 바로 봐요</span></a>
+<div class="cgrid"><a href="https://www.youtube.com/@113kongai?sub_confirmation=1" target="_blank" rel="noopener"><b>유튜브 구독</b><span>새 영상 바로 보기</span></a>
 <a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a>
-<a href="https://www.youtube.com/@113dchallenge/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
+<a href="https://www.youtube.com/shorts/_G56BTdk1JY" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a>
+<a href="https://www.youtube.com/@113kongai/shorts" target="_blank" rel="noopener"><b>댓글로 요청</b><span>다뤘으면 하는 도구를 남겨 주세요</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

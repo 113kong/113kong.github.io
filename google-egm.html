@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">클로드</span>
 <h1>Google EGM — 코끼리와 금붕어로 설계 검토</h1>
-<p class="meta">2026-11-16 · 별 1.8만</p>
+<p class="meta">2026-11-16 · 별 1.8만 <a class="yt-btn" href="https://www.youtube.com/shorts/dYnEuZWwCy4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><ul><li>구글이 무료로 공개한 클로드 코드 플러그인이에요(Apache-2.0).</li><li>코끼리는 대화를 기억하며 설계 문서를 쓰고, 금붕어는 문서만 읽고 빠진 곳을 찾아요.</li><li>리뷰 명령 하나로 실제 코드와 설계가 맞는지도 확인해요.</li></ul></div></article></div>
 <article style="padding-top:0">
 <figure><img src="img/google-egm/01-egm.jpg" alt="elephant-goldfish-model 공식 화면" loading="lazy" width="1280" height="600"></figure>
@@ -143,7 +147,7 @@ claude plugin install egm@egm</pre><button class="cp" type="button">복사</butt
 <ul style="padding-left:22px"><li><b>brainstorm</b> — 아이디어를 따져 보고 개념 요약(concepts_brief.md)을 써요.</li><li><b>draft</b> — 요약이나 메모를 설계 문서로 바꿔요. 절마다 멈춰 의견을 물어요.</li><li><b>resolve</b> — 검토에서 나온 지적을 하나씩 정리하고 고칠 것을 정해요.</li><li><b>bootstrap</b> — 이미 있는 코드베이스의 문서를 새로 만들거나 고쳐요.</li><li><b>review</b> — 기억 없는 새 에이전트들이 다섯 단계로 설계를 검토해요.</li><li><b>review-loop</b> — 검토자와 기준을 골라 원하는 문서를 검토해요.</li><li><b>drift-report</b> — 저장된 문서와 지금 코드를 비교해 어긋난 곳을 알려 줘요.</li></ul>
 <p class="warn">금붕어 검토는 새 하위 에이전트를 띄울 수 있는 환경에서만 돌아가요. 검토가 테스트나 사람 판단을 대신하지는 않아요.</p>
 <div class="links"><a href="https://github.com/google/elephant-goldfish-model" target="_blank" rel="noopener">elephant-goldfish-model <span>github.com/google/elephant-goldfish-model ↗</span></a></div>
-<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a></div></section></article>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a><a href="https://www.youtube.com/shorts/dYnEuZWwCy4" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>

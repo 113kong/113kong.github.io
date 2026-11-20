@@ -125,12 +125,16 @@ details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
 </style></head>
 <body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
-<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113dchallenge" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
 <div class="mesh"><article><span class="eyebrow">클로드</span>
 <h1>Cloudflare 보안 감사 스킬 — 배포 전 보안 점검</h1>
-<p class="meta">2026-11-15 · 별 7.2만</p>
+<p class="meta">2026-11-15 · 별 7.2만 <a class="yt-btn" href="https://www.youtube.com/shorts/GA6gm5sYIJE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
 <div class="box"><ul><li>클라우드플레어가 무료로 공개한 보안 감사 스킬이에요(MIT).</li><li>여러 에이전트가 나눠 찾고, 다른 에이전트가 진짜 위험인지 다시 따져요.</li><li>위치와 이유를 담은 보고서가 나와요. 여러 번 돌릴수록 더 찾아요.</li></ul></div></article></div>
 <article style="padding-top:0">
 <figure><img src="img/cloudflare-security-audit/01-security-audit.jpg" alt="security-audit-skill 공식 화면" loading="lazy" width="1280" height="900"></figure>
@@ -141,7 +145,7 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radi
 <ol class="steps"><li>점검할 앱 폴더에서 클로드 코드를 열어요.</li><li>&quot;security audit this codebase&quot;라고 요청해요.</li><li>보고서는 ~/security-audit-skill/&lt;저장소 이름&gt;/run-N 폴더의 REPORT.md에 생겨요. 한 번에 절반쯤 찾으니 여러 번 돌려요.</li></ol>
 <p class="warn">앱 코드를 직접 실행해 확인하는 단계는 인터넷이 막힌 격리 환경(샌드박스)에서만 하세요. 없으면 그 항목은 &#x27;확인 필요&#x27;로 남겨요.</p>
 <div class="links"><a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener">security-audit-skill <span>github.com/cloudflare/security-audit-skill ↗</span></a></div>
-<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a></div></section></article>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a><a href="https://www.youtube.com/shorts/GA6gm5sYIJE" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a></div></section></article>
 <footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
 const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
 setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>
