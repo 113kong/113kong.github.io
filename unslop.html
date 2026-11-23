@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>언슬롭(unslop) — AI 티 나는 화면을 디자이너처럼 다듬는 무료 클로드 스킬 · 113 자료실</title><meta name="description" content="AI로 만든 화면에 흔한 AI 티(보라색 그라데이션·빛나는 효과·이모지 아이콘·느낌표 문구·고르지 않은 간격)를 찾아 고쳐 주는 무료 스킬이에요. 2026-10-29 공개, 깃허브 별 2만 개 넘음(CC BY 4.0). /unslop을 치면 먼저 AI 티를 어디 있는지"><meta name="theme-color" content="#F0F9FF">
+<link rel="canonical" href="https://113kong.github.io/unslop"><meta property="og:type" content="website"><meta property="og:site_name" content="113 자료실">
+<meta property="og:locale" content="ko_KR"><meta property="og:title" content="언슬롭(unslop) — AI 티 나는 화면을 디자이너처럼 다듬는 무료 클로드 스킬 · 113 자료실"><meta property="og:description" content="AI로 만든 화면에 흔한 AI 티(보라색 그라데이션·빛나는 효과·이모지 아이콘·느낌표 문구·고르지 않은 간격)를 찾아 고쳐 주는 무료 스킬이에요. 2026-10-29 공개, 깃허브 별 2만 개 넘음(CC BY 4.0). /unslop을 치면 먼저 AI 티를 어디 있는지">
+<meta property="og:url" content="https://113kong.github.io/unslop"><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23082F49'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='800' fill='%23F0F9FF' text-anchor='middle'%3E113%3C/text%3E%3C/svg%3E"><style>
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Pretendard;src:url(fonts/Pretendard-Bold.woff2) format("woff2");font-weight:600 800;font-display:swap}
+:root{--canvas:#F0F9FF;--canvas-2:#F8FCFF;--tray:#DBE7EF;--tray-2:#E4EFF6;--card:#FFFFFF;--line:#C2D1DB;--line-soft:#DDE9F0;
+--ink:#082F49;--ink-2:#32536A;--mute:#557285;--faint:#98ACBA;--accent:#0369A1;--accent-strong:#035E90;--tint:#BAE6FD;--wash:#D8F0FE;
+--pos:#2A7A3B;--neg:#B0263F;--code:#0A1B27;
+--sh1:0 1px 3px rgba(8,47,73,.08);--sh2:0 15px 35px -12px rgba(8,47,73,.18),0 5px 15px -6px rgba(8,47,73,.08);
+--ease:cubic-bezier(.16,1,.3,1);--gut:16px}
+@media(min-width:720px){:root{--gut:32px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--canvas);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gut)}
+.nav{position:sticky;top:0;z-index:10;background:rgba(240,249,255,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line-soft)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.logo i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--canvas);font-style:normal;font-size:12px;letter-spacing:0}
+.nav nav{display:flex;gap:6px;align-items:center}
+.nav nav a{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-radius:999px}
+.nav nav a.on{background:var(--ink);color:var(--canvas)}
+.mesh{background:radial-gradient(80% 120% at 85% -20%,rgba(56,189,248,.28),transparent 60%),radial-gradient(60% 90% at 0% 0%,rgba(186,230,253,.55),transparent 65%)}
+.hero{padding-top:56px;padding-bottom:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent);background:var(--card);
+border:1px solid var(--line-soft);border-radius:999px;padding:5px 12px;box-shadow:var(--sh1)}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(30px,6.4vw,46px);font-weight:800;line-height:1.2;letter-spacing:-.035em;margin:16px 0 12px}
+.sub{font-size:17px;color:var(--ink-2);max-width:620px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.stat{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;padding:10px 14px;box-shadow:var(--sh1);font-size:13px;color:var(--mute)}
+.stat b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.02em}
+.keys{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 22px;font-size:14px;color:var(--mute)}
+.chip{font-size:14px;font-weight:600;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;text-decoration:none;transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+button.chip{font-family:inherit;cursor:pointer}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--canvas)}
+.chip small{font-size:12px;font-weight:500;opacity:.7;margin-left:4px}
+.card[hidden]{display:none}
+.grid{display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:56px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line-soft);border-radius:20px;overflow:hidden;
+box-shadow:var(--sh1);text-decoration:none;color:inherit;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.thumb{position:relative;aspect-ratio:16/10;background:var(--ink);color:var(--canvas);padding:18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.thumb::after{content:"";position:absolute;inset:auto -20% -60% auto;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.45),transparent 70%)}
+.thumb .kw{font-size:12px;font-weight:700;letter-spacing:.12em;color:#7DD3FC}
+.thumb .big{position:relative;z-index:1;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.03em}
+.thumb .tools{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:5px}
+.thumb .tools span{font-size:11px;font-weight:600;background:rgba(240,249,255,.12);border:1px solid rgba(240,249,255,.18);border-radius:999px;padding:3px 8px}
+.cbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cmeta{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--mute)}
+.tag{font-size:12px;font-weight:700;color:var(--accent);background:var(--wash);border-radius:6px;padding:2px 8px}
+.ctitle{font-size:19px;font-weight:700;line-height:1.35;letter-spacing:-.02em}
+.cdesc{font-size:14px;color:var(--ink-2);flex:1}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:6px;margin-top:6px;font-size:15px;font-weight:700;color:#fff;
+background:linear-gradient(135deg,#0B7BC0 0%,var(--accent) 50%,var(--accent-strong) 100%);border-radius:12px;padding:12px 16px;
+box-shadow:0 12px 24px -12px rgba(3,105,161,.7),0 2px 6px -1px rgba(3,94,144,.3);text-decoration:none}
+article{max-width:740px;margin:0 auto;padding:40px var(--gut) 24px}
+.meta{font-size:14px;color:var(--mute);margin-bottom:24px}
+.box{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:18px 20px;box-shadow:var(--sh1);margin:18px 0}
+.box h3{font-size:14px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:8px}
+.box ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.kv{width:100%;border-collapse:collapse;font-size:15px}
+.kv th{text-align:left;font-weight:700;color:var(--ink-2);white-space:nowrap;padding:10px 14px 10px 0;vertical-align:top;width:1%}
+.kv td{padding:10px 0;color:var(--ink)}
+.kv tr+tr th,.kv tr+tr td{border-top:1px solid var(--line-soft)}
+@media(max-width:480px){.kv th,.kv td{display:block;width:auto;padding:0}.kv th{padding-top:10px;font-size:13px;color:var(--mute)}.kv td{padding-bottom:10px}.kv tr+tr td{border-top:0}}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.toc a{font-size:13px;font-weight:600;color:var(--ink-2);background:var(--tray-2);border-radius:999px;padding:6px 12px;text-decoration:none}
+.toc a:hover{background:var(--wash);color:var(--accent)}
+h2{font-size:24px;font-weight:800;letter-spacing:-.025em;line-height:1.35;margin:52px 0 6px;scroll-margin-top:76px}
+h2 small{display:block;font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:4px}
+.lead{color:var(--ink-2);margin-bottom:14px}
+h4{font-size:15px;font-weight:700;margin:20px 0 8px}
+ol.steps{padding-left:22px;display:flex;flex-direction:column;gap:6px}
+ul.plain{padding-left:20px;display:flex;flex-direction:column;gap:6px}
+figure{margin:18px 0}
+figure img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:var(--sh2);background:var(--card)}
+figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+figcaption b{color:var(--ink-2);font-weight:700}
+.cmd{position:relative;margin:8px 0}
+.cmd pre{font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#E0F2FE;background:var(--code);border-radius:12px;padding:14px 78px 14px 16px;white-space:pre-wrap;word-break:break-all}
+.cmd.say pre{font-family:Pretendard,-apple-system,sans-serif;font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--line)}
+button.cp{position:absolute;top:9px;right:9px;font:600 12px Pretendard,-apple-system,sans-serif;color:var(--accent);background:var(--wash);border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
+.cmd:not(.say) button.cp{color:#E0F2FE;background:rgba(224,242,254,.12)}
+.warn{font-size:14px;color:var(--ink-2);background:var(--tray-2);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:14px}
+.rd{display:inline-block;font-weight:600;font-size:14px;margin:6px 0}
+table.rt{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;overflow:hidden}
+table.rt td{padding:12px 14px;vertical-align:top}
+table.rt tr+tr td{border-top:1px solid var(--line-soft)}
+table.rt td:first-child{font-weight:700;color:var(--accent);width:34%}
+@media(max-width:480px){table.rt td{display:block;width:auto!important}table.rt td:first-child{padding-bottom:0}table.rt td:last-child{padding-top:4px}}
+details.faq{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;margin-bottom:8px}
+details.faq summary{cursor:pointer;list-style:none;padding:14px 44px 14px 16px;font-weight:700;position:relative}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:12px;font-size:20px;color:var(--accent);transition:transform .3s var(--ease)}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq p{padding:0 16px 16px;color:var(--ink-2)}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft);text-decoration:none;color:var(--ink)}
+.links a span{font-size:13px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cta{margin-top:56px;padding:26px 22px;border-radius:22px;background:var(--ink);color:var(--canvas)}
+.cta h2{margin:0 0 6px;color:var(--canvas)}
+.cta p{color:#B6CEDF;font-size:15px}
+.cgrid{display:grid;gap:10px;margin-top:18px}
+@media(min-width:640px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+.cgrid a{display:block;background:rgba(240,249,255,.07);border:1px solid rgba(240,249,255,.14);border-radius:14px;padding:14px;color:var(--canvas);text-decoration:none;transition:background .3s var(--ease)}
+.cgrid a:hover{background:rgba(240,249,255,.13)}
+.cgrid b{display:block;font-size:15px;margin-bottom:2px}
+.cgrid span{font-size:13px;color:#B6CEDF}
+details.grp{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;margin-bottom:8px}
+details.grp summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between}
+details.grp summary::-webkit-details-marker{display:none}
+details.grp summary span{color:var(--mute);font-weight:500;font-size:14px}
+.row{border-top:1px solid var(--line-soft);padding:14px 16px}
+.row a.nm{font-weight:700;text-decoration:none}
+.row .does{font-size:14px;color:var(--ink-2);margin:2px 0 6px}
+footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0 40px;font-size:13px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+code{font:13px ui-monospace,Menlo,monospace;background:var(--tray-2);border-radius:5px;padding:1px 5px}
+.yt-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;border-radius:999px;padding:4px 12px;text-decoration:none;transition:all .2s var(--ease);vertical-align:middle;margin-left:8px}
+.yt-btn:hover{background:#FEE2E2;border-color:#F87171;color:#B91C1C}
+.yt-btn svg{width:14px;height:14px;fill:currentColor}
+.tag.yt{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+</style></head>
+<body><header class="nav"><div class="wrap"><a class="logo" href="./"><i>113</i>113 자료실</a>
+<nav><a class="" href="./">자료실</a><a href="https://www.youtube.com/@113kongai" target="_blank" rel="noopener">유튜브</a><a href="https://www.instagram.com/113kong.ai" target="_blank" rel="noopener">인스타그램</a></nav></div></header>
+<div class="mesh"><article><span class="eyebrow">클로드 코드</span>
+<h1>언슬롭(unslop) — AI 티 나는 화면을 디자이너처럼 다듬는 무료 클로드 스킬</h1>
+<p class="meta">공개 준비 중 <a class="yt-btn" href="https://www.youtube.com/shorts/wbagamF4w3o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73z"/></svg>유튜브 숏츠 영상 보기 ↗</a></p>
+<div class="box"><ul><li>AI로 만든 화면에 흔한 AI 티(보라색 그라데이션·빛나는 효과·이모지 아이콘·느낌표 문구·고르지 않은 간격)를 찾아 고쳐 주는 무료 스킬이에요. 2026-10-29 공개, 깃허브 별 2만 개 넘음(CC BY 4.0).</li><li>/unslop을 치면 먼저 AI 티를 어디 있는지까지 목록으로 짚고, 내 서비스에 맞는 방향을 제안한 다음 간격·색·아이콘·문구 순서로 한 겹씩 고쳐요. 이미 괜찮은 화면이면 괜찮다고 말하고 작은 손질만 권해요.</li><li>고쳐지는 과정을 10초 안 되는 정사각 영상으로 뽑을 수 있어요(Playwright·ffmpeg 필요). 클로드 코드 말고 코덱스·안티그래비티에서도 돼요.</li></ul></div></article></div>
+<article style="padding-top:0">
+<figure><img src="img/unslop/01-unslop.jpg" alt="unslop 공식 화면" loading="lazy" width="1400" height="1166"></figure>
+<h2>설치</h2>
+<h4>클로드 코드(터미널에서 한 줄)</h4><div class="cmd"><pre>claude plugin install unslop --marketplace heydamir/unslop</pre><button class="cp" type="button">복사</button></div>
+<h4>옛 클로드 코드(두 줄)</h4><div class="cmd"><pre>claude plugin marketplace add heydamir/unslop
+claude plugin install unslop@heydamir</pre><button class="cp" type="button">복사</button></div>
+<h4>설치 뒤</h4><div class="cmd"><pre>새 세션을 열거나 /reload-plugins</pre><button class="cp" type="button">복사</button></div>
+<h2>쓰는 법</h2>
+<ol class="steps"><li>클로드 코드를 내 화면 코드가 있는 폴더에서 열어요.</li><li>/unslop this dashboard처럼 고칠 화면을 말해요. 클로드가 AI 티 목록과 방향을 먼저 보여 줘요.</li><li>방향이 마음에 들면 그대로 진행해요. 간격·색·아이콘·문구 순서로 고쳐요.</li></ol>
+<h2>바로 쓰는 요청문</h2>
+<div class="cmd say"><pre>/unslop this dashboard</pre><button class="cp" type="button">복사</button></div>
+<div class="cmd say"><pre>/unslop the hero of https://내사이트주소</pre><button class="cp" type="button">복사</button></div>
+<div class="cmd say"><pre>/unslop my landing page and make the story video so I can post it</pre><button class="cp" type="button">복사</button></div>
+<h2>AI 티 60가지 한글 목록(이렇게 보이면 → 이렇게 고친다)</h2>
+<ul style="padding-left:22px"><li><b>면·색 1</b> — 보라→파랑, 보라→분홍 그라데이션 배경·카드·버튼 → 무채색 한 면, 강조색은 뜻 있는 곳에만</li><li><b>면·색 2</b> — 제목·숫자·로고에 그라데이션 글자 → 단색 글자</li><li><b>면·색 3</b> — 색 있는 빛 번짐 그림자, 빛나는 알약 → 빼고, 깊이는 면 단계와 가는 선으로</li><li><b>면·색 4</b> — 글 뒤 퍼지는 색 얼룩·흐린 덩어리 → 뺀다</li><li><b>면·색 5</b> — 네온·진한 색 테두리 → 투명도 6~10% 가는 선</li><li><b>면·색 6</b> — 비슷한 연보라 다섯 개 같은 글자색 → 한 무채색 사다리에서 글자 역할 셋</li><li><b>면·색 7</b> — 전부 강조해서 아무것도 안 튐 → 강조색은 한 화면에 한두 번</li><li><b>면·색 8</b> — 흰 안쪽 반사광 + 색 그림자 유리 카드 → 가는 선 두른 평범한 카드</li><li><b>글꼴 1</b> — 굵기 800·900 제목 → 400~500, 위계는 크기로</li><li><b>글꼴 2</b> — 자간 넓힌 대문자 라벨 → 보통 문장 대소문자</li><li><b>글꼴 3</b> — 한 화면에 크기·굵기가 너무 많음 → 정해진 몇 단계, 굵기 400·500</li><li><b>글꼴 4</b> — $48,210 옆 $124,860.40처럼 섞인 숫자 형식 → 한 형식, 고정폭 숫자</li><li><b>글꼴 5</b> — 작은 글자에 좁힌 자간 → 0이나 살짝 넓게</li><li><b>글꼴 6</b> — 강조에 기울임꼴 → 색이나 굵기로</li><li><b>아이콘 1</b> — 메뉴·라벨·상태에 이모지(🏠 🚀 💰 🔥) → 선 아이콘 한 벌이나 없음</li><li><b>아이콘 2</b> — 알약·숫자 속 이모지(18 👤) → 숫자만</li><li><b>아이콘 3</b> — 크기·색 제각각 아이콘 → 한 크기, 한 선 굵기</li><li><b>아이콘 4</b> — 줄에서 비뚤게 놓인 아이콘 → 줄마다 같은 아이콘 칸 폭</li><li><b>아이콘 5</b> — AI 붙은 곳마다 반짝이 ✨ → 빼거나 설명이 될 때만 평범한 아이콘</li><li><b>간격 1</b> — 13px·7px·31px 같은 제멋대로 값 → 4px 눈금</li><li><b>간격 2</b> — 한 목록 안 줄 높이·간격이 다름 → 한 높이, 한 간격</li><li><b>간격 3</b> — 자기 무리보다 옆 무리에 더 붙은 묶음 → 안은 좁게, 사이는 넓게</li><li><b>간격 4</b> — 형제 카드끼리 안쪽 여백이 다름 → 한 여백</li><li><b>간격 5</b> — 위는 휑하고 아래는 빽빽 → 고른 리듬</li><li><b>문구 1</b> — &#x27;다시 오셨네요! 👋&#x27; 인사 제목 → 페이지나 기간 이름을 제목으로</li><li><b>문구 2</b> — 느낌표·!! → 평서문</li><li><b>문구 3</b> — 기준 없는 변화(+12%!!) → &#x27;+12% 지난달 대비&#x27;</li><li><b>문구 4</b> — &#x27;뭐든 검색하세요…&#x27; 같은 긴 안내 문구 → &#x27;검색&#x27;</li><li><b>문구 5</b> — 혁신·끊김 없는·마법 같은 과장어 → 실제로 하는 일</li><li><b>문구 6</b> — 라벨·버튼 끝 마침표 → 없음</li><li><b>문구 7</b> — $123,456·[X] 같은 가짜 같은 데이터 → 그럴듯한 숫자</li><li><b>부품 1</b> — 숫자·요금제·단축키에 빛나는 알약 → 조용한 고정폭 글자나 키캡</li><li><b>부품 2</b> — PRO·New ✨·Beta 🚀 배지 남발 → 빼거나 조용한 글자 배지 하나</li><li><b>부품 3</b> — 검색창부터 카드까지 전부 알약 모양 → 크기에 맞는 둥글기</li><li><b>부품 4</b> — 무지개·빛나는·알약 모양 막대, 대문자 요일 차트 → 한두 계열, 흐린 눈금, 강조색 하나</li><li><b>부품 5</b> — 모든 차트를 강조색 여러 농도로 → 무채색 단계, 강조색은 중요한 하나에만</li><li><b>부품 6</b> — 숫자 카드마다 작은 선 그래프 → 숫자·이름·변화만</li><li><b>부품 7</b> — 같은 차트 든 같은 카드 나란히 → 큰 차트 하나, 작은 숫자들, 폭을 다르게</li><li><b>부품 8</b> — 반짝이 붙은 그라데이션 로고 → 글자 이름 + 단순한 평면 마크</li><li><b>부품 9</b> — 번들번들한 구슬·빛나는 점 로고 → 단색 평면 기호나 글자 로고만</li><li><b>첫 화면 1</b> — 제목 위 &#x27;✨ X 2.0 출시&#x27; 알약 → 빼거나 진짜 소식이면 조용한 글자 링크</li><li><b>첫 화면 2</b> — &#x27;AI로 일을 슈퍼차지하세요&#x27;처럼 아무 제품에나 맞는 제목 → 누구에게 뭘 해 주는지</li><li><b>첫 화면 3</b> — 제목에 그라데이션·반짝임 → 단색 글자</li><li><b>첫 화면 4</b> — 첫 화면 뒤 떠다니는 덩어리·구슬·격자·빛나는 선 → 평범한 바탕이나 실제 제품 그림 하나</li><li><b>첫 화면 5</b> — 제목·글·버튼·그림 전부 가운데 쌓기 → 비대칭 나누기나 큰 제품 화면 위 글</li><li><b>첫 화면 6</b> — 버튼 세 개 이상, 버튼 밑 칩·얼굴 줄 → 주 버튼 하나, 보조 하나까지</li><li><b>첫 화면 7</b> — 출처 없는 &#x27;1만 팀이 신뢰&#x27;·별 다섯 개 → 진짜인지 묻고, 구체적으로 줄이거나 뺀다</li><li><b>첫 화면 8</b> — 스크롤할 때 떠다니는 시차 효과 → 고정 배치, 움직임은 까닭 있을 때만</li><li><b>첫 화면 9</b> — 이모지 + 굵은 제목 + 흐릿한 한 줄 기능 카드 → 기능 줄이고 구체적 문구</li><li><b>그림 1</b> — 번들거리는 3D 덩어리·구슬·크롬·보라 성운 → 제품 자체나 하는 일을 보여 주는 비유 하나</li><li><b>그림 2</b> — AI라면 로봇·빛나는 뇌·회로선·홀로그램 → 빼거나 AI가 실제로 만든 결과</li><li><b>그림 3</b> — 그림 속에 박힌 글자·가짜 버튼·가짜 로고 → 페이지의 진짜 글자, 글 없는 그림</li><li><b>그림 4</b> — 모서리가 딱 끊기고 검정이 다른 그림 → 바탕 맞추고 가장자리 부드럽게</li><li><b>그림 5</b> — 모든 구역에 그림 → 도움 될 때만 하나, 보통 첫 화면만</li><li><b>움직임 1</b> — 살아 있지 않은 것에 깜빡임·숨 쉬는 빛 → 고정</li><li><b>움직임 2</b> — 카드·버튼마다 커지는 호버 → 색·면 단계, 누를 때만 살짝 작게</li><li><b>움직임 3</b> — 통통 튀는 스프링·지나침 → 부드럽게 멈추는 곡선 하나</li><li><b>움직임 4</b> — 로드 때 사방에서 날아드는 요소 → 짧게 나타나며 살짝 올라오기, 작은 시차</li><li><b>움직임 5</b> — 스크롤 시차·떠다니는 반복 → 고정 배치</li><li><b>움직임 6</b> — 너비·높이·위치를 움직임 → transform·opacity로</li></ul>
+<p class="warn">사이트 주소만으로 화면을 찍거나 영상을 만들려면 Playwright와 크로미움, 영상에는 ffmpeg가 더 필요해요. 그림을 새로 만들 때는 유료 서비스를 쓸 수 있어서, 돈 드는 생성 전에는 꼭 물어봐요.</p>
+<div class="links"><a href="https://github.com/heydamir/unslop" target="_blank" rel="noopener">unslop <span>github.com/heydamir/unslop ↗</span></a></div>
+<section class="cta"><div class="cgrid"><a href="./"><b>다른 자료 보기</b><span>자료실 전체 목록</span></a><a href="https://www.youtube.com/shorts/wbagamF4w3o" target="_blank" rel="noopener"><b>유튜브 숏츠 영상</b><span>해당 편 숏츠 바로보기</span></a></div></section></article>
+<footer><div class="wrap"><span>113일 수익화 일지 · AI 자동화를 싸게 하는 법</span><span>전부 무료예요</span></div></footer><script>document.addEventListener('click',ev=>{const b=ev.target.closest('button.cp');if(!b)return;
+const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨';
+setTimeout(()=>b.textContent='복사',1200)})})</script></body></html>
